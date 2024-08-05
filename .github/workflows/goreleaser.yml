@@ -3,19 +3,18 @@ name: goreleaser
 on:
   push:
     tags:
-      - "*"
-    branches:
-      - "master"
-      - "main"
+      - "v*"
 
 permissions:
-  contents: write
-  # issues: write
-  id-token: write
+  contents: read
 
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      # issues: write
+      id-token: write
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c # v2.9.0

@@ -1,3 +1,5 @@
+version: 2
+
 # Verifiable build
 gomod:
   # Proxy a module from proxy.golang.org, making the builds verifiable.
@@ -64,7 +66,8 @@ nfpms:
 
 # Signing!
 signs:
-  - cmd: cosign
+  - id: checksum
+    cmd: cosign
     certificate: "${artifact}.pem"
     args:
       - "sign-blob"
@@ -72,14 +75,4 @@ signs:
       - "--output-signature=${signature}"
       - "${artifact}"
       - "--yes" # needed on cosign 2.0.0+
-    artifacts: all
-
-binary_signs:
-  - cmd: cosign
-    certificate: "${artifact}.pem"
-    args:
-      - "sign-blob"
-      - "--output-certificate=${certificate}"
-      - "--output-signature=${signature}"
-      - "${artifact}"
-      - "--yes" # needed on cosign 2.0.0+
+    artifacts: checksum

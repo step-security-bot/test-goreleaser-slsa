@@ -5,9 +5,9 @@ name: Go
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "main", $default-branch ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "main", $default-branch ]
 
 permissions:
   contents: read
@@ -32,5 +32,5 @@ jobs:
     - name: Build
       run: go build -v ./...
 
-    #- name: Test
-    #  run: go test -v ./...
+    - name: Test
+      run: go test -v ./...

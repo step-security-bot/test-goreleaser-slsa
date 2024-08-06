@@ -30,9 +30,9 @@ name: SonarCloud analysis
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master", "main", $default-branch ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master", "main", $default-branch ]
   workflow_dispatch:
 
 permissions:

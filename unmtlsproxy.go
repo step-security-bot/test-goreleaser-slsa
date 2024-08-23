@@ -18,9 +18,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/ajabep/unmtlsproxy/internal/configuration"
-	"github.com/ajabep/unmtlsproxy/internal/httpproxy"
-	"github.com/ajabep/unmtlsproxy/internal/tcpproxy"
+	"github.com/ajabep/test-goreleaser-slsa/internal/configuration"
+	"github.com/ajabep/test-goreleaser-slsa/internal/httpproxy"
+	"github.com/ajabep/test-goreleaser-slsa/internal/tcpproxy"
 )
 
 func main() {

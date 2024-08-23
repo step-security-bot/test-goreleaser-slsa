@@ -46,7 +46,7 @@ checksum:
 # Releaser
 nfpms:
   - vendor: Ajabep
-    homepage: https://github.com/ajabep/unmtlsproxy
+    homepage: https://github.com/ajabep/test-goreleaser-slsa
     maintainer: Ajabep <https://github.com/ajabep>
     description: |-
       Just a silly app to remove the mutual TLS authentication to some services.

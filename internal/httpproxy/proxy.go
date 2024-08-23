@@ -22,7 +22,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/ajabep/unmtlsproxy/internal/configuration"
+	"github.com/ajabep/test-goreleaser-slsa/internal/configuration"
 )
 
 func makeHandleHTTP(dest string, tlsConfig *tls.Config) func(w http.ResponseWriter, req *http.Request) {

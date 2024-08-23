@@ -1,4 +1,4 @@
-module github.com/ajabep/unmtlsproxy
+module github.com/ajabep/test-goreleaser-slsa
 
 go 1.22
 

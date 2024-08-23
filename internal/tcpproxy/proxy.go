@@ -19,7 +19,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/ajabep/unmtlsproxy/internal/configuration"
+	"github.com/ajabep/test-goreleaser-slsa/internal/configuration"
 )
 
 type proxy struct {

@@ -121,6 +121,7 @@ jobs:
           checksums=$(echo "$CHECKSUMS" | base64 -d)
           while read -r line; do
               filename="$(echo "$line" | cut -d ' ' -f2- | grep -E '\.sig$' | sed 's/\.sig$//' )"
+              echo "Verifying $filename"
               # Download as any one, without any GH token
               wget "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/download/${{ github.ref_name }}/$filename"
 

@@ -77,8 +77,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions: read-all
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@5c7944e73c4c2a096b17a9cb74d65b6c2bbafbde # v2.9.1
+        with:
+          egress-policy: audit
+
       - name: Install the verifier
-        uses: slsa-framework/slsa-verifier/actions/installer@v2.6.0
+        uses: slsa-framework/slsa-verifier/actions/installer@3714a2a4684014deb874a0e737dffa0ee02dd647 # v2.6.0
 
       - name: Download assets
         env:
@@ -110,6 +115,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions: read-all
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@5c7944e73c4c2a096b17a9cb74d65b6c2bbafbde # v2.9.1
+        with:
+          egress-policy: audit
+
       - name: Install cosign
         uses: sigstore/cosign-installer@4959ce089c160fddf62f7b42464195ba1a56d382 # v3.6.0
 
